@@ -10,7 +10,7 @@
   "onCreateCommand": "sudo chown -R vscode:vscode /workspaces/${localWorkspaceFolderBasename}",
   "postStartCommand": "bun install --frozen-lockfile",
   "mounts": [
-    "source=${localWorkspaceFolderBasename}_bun_chache,target=/workspaces/${localWorkspaceFolderBasename}/.bun/install/cache,type=volume"
+    "source=${localWorkspaceFolderBasename}_node_modules,target=/workspaces/${localWorkspaceFolderBasename}/node_modules,type=volume"
   ],
   "customizations": {
     "vscode": {
