@@ -1,0 +1,24 @@
+{
+  "name": "workspace",
+  "image": "oven/bun:latest",
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode"
+    }
+  },
+  "onCreateCommand": "sudo chown -R vscode:vscode /workspaces/${localWorkspaceFolderBasename}",
+  "postStartCommand": "bun install --frozen-lockfile",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}_bun_chache,target=/workspaces/${localWorkspaceFolderBasename}/.bun/install/cache,type=volume"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
