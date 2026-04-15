@@ -68,7 +68,7 @@
 		"EXCLUDE_HOST": false,
 		"CF_HTTP_STATUS_GROUP": false,
 		"METRICS_PATH": "/metrics",
-		"DISABLE_UI": false,
-		"DISABLE_CONFIG_API": false
+		"DISABLE_UI": true,
+		"DISABLE_CONFIG_API": true
 	}
 }
